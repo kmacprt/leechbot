@@ -1,8 +1,8 @@
 FROM breakdowns/mega-sdk-python:latest
 
-RUN mkdir ./CendrawasihLeech
+RUN mkdir ./leechbot
 RUN chmod 777 ./CendrawasihLeech
-WORKDIR /CendrawasihLeech
+WORKDIR /leechbot
 
 ENV TZ=Asia/Jakarta
 
@@ -14,10 +14,10 @@ RUN apt -qq update --fix-missing && \
 RUN wget https://rclone.org/install.sh
 RUN bash install.sh
 
-RUN mkdir /CendrawasihLeech/Leech
-RUN wget -O /CendrawasihLeech/Leech/gclone.gz https://git.io/JJMSG
-RUN gzip -d /CendrawasihLeech/Leech/gclone.gz
-RUN chmod 0775 /CendrawasihLeech/Leech/gclone
+RUN mkdir /leechbot/Leech
+RUN wget -O /leechbot/Leech/gclone.gz https://git.io/JJMSG
+RUN gzip -d /leechbot/Leech/gclone.gz
+RUN chmod 0775 /leechbot/Leech/gclone
 
 # RUN wget -O /CendrawasihLeech/dht.dat https://raw.githubusercontent.com/P3TERX/aria2.conf/master/dht.dat
 # RUN wget -O /CendrawasihLeech/dht6.dat https://raw.githubusercontent.com/P3TERX/aria2.conf/master/dht6.dat
