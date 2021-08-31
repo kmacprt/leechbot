@@ -4,7 +4,7 @@ RUN mkdir ./leechbot
 RUN chmod 777 ./CendrawasihLeech
 WORKDIR /leechbot
 
-ENV TZ=Asia/Jakarta
+ENV TZ=Asia/Colombo
 
 RUN apt -qq update --fix-missing && \
     rm -rf /var/lib/apt/lists/* && \
